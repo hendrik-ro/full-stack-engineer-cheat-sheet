@@ -5,6 +5,17 @@
 
 nav {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 1;
+    box-shadow: 0px 2px darkslategray;
+}
+
+nav a {
+    margin: 5px 5px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,10 +59,6 @@ a:hover {
     color: lightsalmon;
 }
 
-table {
-    width: 650px;
-}
-
 table, th {
     border: 2px solid darkslategrey;
     margin: 0 auto;
@@ -60,10 +67,17 @@ table, th {
 
 table tbody tr td {
     border: 1px solid darkslategray;
+    padding: 0px 5px;
+}
+
+table code {
+    width: 250px;
 }
 
 .code {
-    background-color: dimgray;
+    background-color: slategrey;
+    opacity: 0.7;
+    padding: 2px 5px;
 }
 
 .home {

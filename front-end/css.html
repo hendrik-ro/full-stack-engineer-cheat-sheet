@@ -8,18 +8,65 @@
      <nav>
          <a href="../index.html" title="Content">Home</a>
          <a href="#css">CSS</a>
+         <a href="#selectors">Selectors</a>
+         <a href="#properties">Properties</a>
+         <a href="#skeuomorphism">Skeuomorphism</a>
      </nav>
  </header>
  <div id="css">
      <h1>CSS</h1>
      <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">Cascading Style Sheets</a> are used to specify the presentation and styling of a document written in a markup language such as HTML.</p>
-     <div id="selectors">
-         <h2>CSS selectors</h2>
-         <h3>Anchor</h3>
+     <div>
+         <h2 id="selectors">Selectors</h2>
+         <table>
+             <thead>
+                 <th>Selector</th>
+                 <th>Code example</th>
+                 <th>Description</th>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td><span class="code">a</span></td>
+                     <td><code>a {
+   color: blue;
+}</code></td>
+                     <td>Defines style for all anchor elements.</td>
+                 </tr>
+                 <tr>
+                     <td><span class="code">div p</span></td>
+                     <td><code>div p {
+   border: 1px solid white;
+}</code></td>
+                     <td>Defines style for all paragraph elements within div elements.</td>
+                 </tr>
+                 <tr>
+                     <td><span class="code">h1, h2, h3</span></td>
+                     <td><code>h1, h2, h3 {
+    text-transform: capitalize;
+}</code></td>
+                     <td>Defines style for all listed elements.</td>
+                 </tr>
+                 <tr>
+                     <td><span class="code">.class</span></td>
+                     <td><code>.class {
+   background-color: lightblue;
+}</code></td>
+                     <td>Defines style for all elements of a class.</td>
+                 </tr>
+                 <tr>
+                     <td><span class="code">#id</span></td>
+                     <td><code>#id {
+   text-align: center;
+}</code></td>
+                     <td>Defines style for an element with a unique id.</td>
+                 </tr>
+             </tbody>
+         </table>
+         <h2 id="properties">Properties</h2>
          <table>
              <thead>
                  <th>Property</th>
-                 <th>Code</th>
+                 <th>Code example</th>
                  <th>Description</th>
              </thead>
              <tbody>
@@ -55,7 +102,7 @@ button:active {
     box-shadow: 0px 0px;
 }</code><br>
          <p>The CSS above renders the following button.</p>
-         <button id="button">Test</button>
+         <button id="button">Button</button>
      </div>
  </div>
  </body>
