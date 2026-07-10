@@ -9,6 +9,10 @@ const links = [
     name: 'React',
     href: '/front-end/react',
   },
+  {
+    name: 'DOM',
+    href: '/front-end/react/#dom',
+  },
 ];
 
 export default function NavLinks() {

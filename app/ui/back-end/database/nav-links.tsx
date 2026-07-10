@@ -9,6 +9,18 @@ const links = [
     name: 'Database',
     href: '/back-end/database',
   },
+  {
+    name: 'PostgreSQL',
+    href: '/back-end/database#postgres',
+  },
+  {
+    name: 'SQLite',
+    href: '/back-end/database#sqlite',
+  },
+  {
+    name: 'SQL Injection',
+    href: '/back-end/database#sqli',
+  },
 ];
 
 export default function NavLinks() {

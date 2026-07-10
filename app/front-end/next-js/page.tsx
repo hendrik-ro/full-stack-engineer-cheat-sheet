@@ -5,7 +5,7 @@ export default function Page() {
   return <div>
     <div id="nextjs">
         <h1>NextJS</h1>
-        <p><a target="_blank" href="https://nextjs.org/">NextJS</a> is a framework for <a href="../front-end/react.html">React</a>.</p>
+        <p><a target="_blank" href="https://nextjs.org/">NextJS</a> is a framework for <a href="/front-end/react">React</a>.</p>
     </div>
     <div id="setup">
         <h2>Setup</h2>

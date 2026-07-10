@@ -9,6 +9,14 @@ const links = [
     name: 'APIs',
     href: '/back-end/api',
   },
+  {
+    name: 'REST',
+    href: '/back-end/api#rest',
+  },
+  {
+    name: 'WebSockets',
+    href: '/back-end/api#websockets',
+  },
 ];
 
 export default function NavLinks() {

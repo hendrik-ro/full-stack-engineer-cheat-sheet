@@ -9,6 +9,10 @@ const links = [
     name: 'Server',
     href: '/back-end/server',
   },
+  {
+    name: 'Boiler Plate',
+    href: '/back-end/server/#boilerPlate',
+  },
 ];
 
 export default function NavLinks() {
