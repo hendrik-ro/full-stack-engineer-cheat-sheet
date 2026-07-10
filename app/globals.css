@@ -20,17 +20,6 @@ p {
     text-align: center;
 }
 
-code {
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid white;
-    border-radius: 5px;
-    text-decoration: none;
-    margin: 10px;
-    white-space: pre;
-    text-align: left !important;
-}
-
 div {
     text-align: center;
 }
@@ -90,10 +79,12 @@ table code {
 .content {
     position: relative;
     top: 10px; /* Adjust based on the height of your navigation bar */
+    left: auto;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
     overflow: scroll;
+    width: fit-content;
 }
 
 .sidebar {
@@ -107,10 +98,15 @@ table code {
     border-right: 2px solid darkslategray;
 }
 
-.code {
-    background-color: slategrey;
-    opacity: 0.7;
-    padding: 2px 5px;
+.codeSnippet {
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    white-space: pre;
+    text-align: left !important;
 }
 
 .home {
