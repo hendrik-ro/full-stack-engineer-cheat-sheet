@@ -13,7 +13,8 @@ export default function Home() {
 function HomeContent() {
   return (
     <div className="home">
-      <h1>Full-Stack Engineer Cheat Sheet</h1>
+      <h1>Full Stack Engineer Cheat Sheet</h1>
+      <p style={{fontSize: '12px'}}>This cheat sheet is work in progress and is continuously updated.</p>
       <h2 id="front">Front End</h2>
         <Link href="./front-end/html/">HTML</Link>
         <Link href="./front-end/css/">CSS</Link>
