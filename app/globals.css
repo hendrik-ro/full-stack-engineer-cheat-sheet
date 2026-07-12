@@ -3,6 +3,22 @@
   color: whitesmoke;
 }
 
+/* Mobile (default): Collapse sidebar */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 50px;
+    overflow: hidden;
+  }
+}
+
+/* Desktop (md and up): Expand sidebar */
+@media (min-width: 768px) {
+  .sidebar {
+    width: 200px;
+    overflow: auto;
+  }
+}
+
 h1, h2, h3, h4, h5, h6, p, div {
   text-align: center;
   padding-top: 10px;
@@ -98,6 +114,14 @@ table code {
   z-index: 500;
   border-right: 2px solid darkslategray;
   flex: 0 0 auto;
+  transition: width 0.3s ease;
+}
+
+.buttonRight {
+    float: right;
+    margin-right: 10px;
+    border: 1px solid darkslategray;
+    color: slategray;
 }
 
 .codeSnippet {
