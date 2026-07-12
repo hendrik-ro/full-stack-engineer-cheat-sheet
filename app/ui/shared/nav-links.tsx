@@ -35,11 +35,11 @@ function ButtonCollapse() {
       if (isSidebarOpen) {
         sidebar.style.width = '50px';
         sidebar.style.overflow = 'hidden';
-        content.style.margin = '0px 0px 25px 25px';
+        content.style.marginLeft = '25px';
       } else {
         sidebar.style.width = '200px';
         sidebar.style.overflow = 'auto';
-        content.style.margin = '0px 0px 25px 200px';
+        content.style.marginLeft = '200px';
       }
       setIsSidebarOpen(!isSidebarOpen);
     }
