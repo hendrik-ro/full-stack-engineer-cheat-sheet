@@ -3,25 +3,8 @@
   color: whitesmoke;
 }
 
-/* Mobile (default): Collapse sidebar */
-@media (max-width: 767px) {
-  .sidebar {
-    width: 50px;
-    overflow: hidden;
-  }
-}
-
-/* Desktop (md and up): Expand sidebar */
-@media (min-width: 768px) {
-  .sidebar {
-    width: 200px;
-    overflow: auto;
-  }
-}
-
 h1, h2, h3, h4, h5, h6, p, div {
   text-align: center;
-  padding-top: 10px;
 }
 
 h2 {
@@ -94,6 +77,7 @@ table code {
   padding: 1.5rem;
   overflow: auto;
   margin: 0px 0px 25px 200px;
+  transition: margin 0.3s ease;
 }
 
 .sidebar {
@@ -166,4 +150,36 @@ table code {
 #button2:active {
   font-size: 18px;
   transition: font-size 0.1s ease-in-out;
+}
+
+/* Mobile (default): */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 50px;
+    overflow: hidden;
+  }
+}
+
+/* Mobile (default): */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 50px;
+    overflow: hidden;
+  }
+
+  .content {
+    margin-left: 50px;
+  }
+}
+
+/* Desktop (md and up): */
+@media (min-width: 768px) {
+  .sidebar {
+    width: 200px;
+    overflow: auto;
+  }
+
+  .content {
+    margin-left: 200px;
+  }
 }
