@@ -30,13 +30,16 @@ function ButtonCollapse() {
 
   const toggleSidebar = () => {
     const sidebar = document.querySelector('.sidebar') as HTMLElement | null;
-    if (sidebar) {
+    const content = document.querySelector('.content') as HTMLElement | null;
+    if (sidebar && content) {
       if (isSidebarOpen) {
         sidebar.style.width = '50px';
         sidebar.style.overflow = 'hidden';
+        content.style.margin = '0px 0px 25px 25px';
       } else {
         sidebar.style.width = '200px';
         sidebar.style.overflow = 'auto';
+        content.style.margin = '0px 0px 25px 200px';
       }
       setIsSidebarOpen(!isSidebarOpen);
     }
