@@ -93,15 +93,7 @@ table code {
   align-items: center;
   padding: 1.5rem;
   overflow: auto;
-  margin-bottom: 25px;
-  margin-left: 200px;
-}
-
-.content > .content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0px 0px 25px 200px;
 }
 
 .sidebar {
