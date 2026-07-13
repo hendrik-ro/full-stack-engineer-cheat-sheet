@@ -195,6 +195,45 @@ function Flexbox() {
       <li><strong>baseline</strong> — the bottom of the content of all items will be aligned with each other.</li>
       <li><strong>stretch</strong> — if possible, the items will stretch from top to bottom of the container (this is the default value; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch).</li>
     </ul>
+    <h3>Flex-grow</h3>
+    <p>Allows child containers to grow into a bigger parent container.</p>
+    <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+      display: flex;
+      width: 500px;
+    }
+
+    .side {
+      width: 100px;
+      flex-grow: 1;
+    }
+
+    .center {
+      width: 100px;
+      flex-grow: 2;
+    }
+`}</SyntaxHighlighter>
+    <p>In this example the .center div will stretch twice as much as the .side divs.</p>
+    <p>If a max-width is set for an element, it will not grow larger than that even if there is more space for it to absorb.</p>
+    <h3>Flex-shrink</h3>
+    <p><em>flex-shrink</em> acts the same as above in the opposite direction.</p>
+    <h3>Flex-basis</h3>
+    <p><em>flex-basis</em> allows us to specify the width of an item before it stretches or shrinks.</p>
+    <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+      display: flex;
+    }
+
+    .side {
+      flex-grow: 1;
+      flex-basis: 100px;
+    }
+
+    .center {
+      flex-grow: 2;
+      flex-basis: 150px;
+    }
+`}</SyntaxHighlighter>
+    <p>In the example above, the .side divs will be 100 pixels wide and the .center div will be 150 pixels wide if the .container div has just the right amount of space (350 pixels, plus a little extra for margins and borders).</p>
+    <p>If the .container div is larger, the .center div will absorb twice as much space as the .side divs.</p>
   </div>
   );
 }
