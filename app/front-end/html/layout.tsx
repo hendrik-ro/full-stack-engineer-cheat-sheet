@@ -14,6 +14,10 @@ const htmlLinks = [
     href: '/front-end/html#column-grid',
   },
   {
+    name: 'Flexbox',
+    href: '/front-end/html#flexbox',
+  },
+  {
     name: 'Head',
     href: '/front-end/html#head',
   },
