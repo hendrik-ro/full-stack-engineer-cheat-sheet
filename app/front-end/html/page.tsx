@@ -103,6 +103,7 @@ function ColumnGridTemplate() {
 function Flexbox() {
   return (<div id="flexbox">
     <h2>Flexbox</h2>
+    <h3>Display</h3>
     <p>A div with the declaration display: flex; will remain block level — no other elements will appear on the same line as it.</p>
     <p>However, it will change the behavior of its child elements. Child elements will not begin on new lines.</p>
     <SyntaxHighlighter language='css' style={atomDark}>{`div.container {
@@ -175,6 +176,25 @@ function Flexbox() {
     }
 `}</SyntaxHighlighter>
     <p>This will cause all of the flex items to shift to the right side of the flex container.</p>
+    <h3>Justify-content</h3>
+    <p>This property will align items horizontally within the parent container.</p>
+    <p>To adjust a flex container`s content, we can use:</p>
+    <ul className='leftList'>
+      <li><strong>flex-start</strong> — all items will be positioned in order, starting from the left of the parent container, with no extra space between or before them. </li>
+      <li><strong>flex-end</strong> — all items will be positioned in order, with the last item starting on the right side of the parent container, with no extra space between or after them.</li>
+      <li><strong>center</strong> — all items will be positioned in order, in the center of the parent container with no extra space before, between, or after them.</li>
+      <li><strong>space-around</strong> — items will be positioned with equal space before and after each item, resulting in double the space between elements.</li>
+      <li><strong>space-between</strong> — items will be positioned with equal space between them, but no extra space before the first or after the last elements.</li>
+    </ul>
+    <h3>Align-items</h3>
+    <p>This property will align items vertically within the parent container.</p>
+    <ul className='leftList'>
+      <li><strong>flex-start</strong> — all elements will be positioned at the top of the parent container.</li>
+      <li><strong>flex-end</strong> — all elements will be positioned at the bottom of the parent container.</li>
+      <li><strong>center</strong> — the center of all elements will be positioned halfway between the top and bottom of the parent container.</li>
+      <li><strong>baseline</strong> — the bottom of the content of all items will be aligned with each other.</li>
+      <li><strong>stretch</strong> — if possible, the items will stretch from top to bottom of the container (this is the default value; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch).</li>
+    </ul>
   </div>
   );
 }
