@@ -116,6 +116,19 @@ table code {
   transition: margin 0.3s ease;
 }
 
+.container-inline-flex {
+    display: inline-flex;
+    border: 1px solid grey;
+    width: 150px;
+}
+
+.box {
+  background-color: dodgerblue;
+  height: 75px;
+  width: 75px;
+  border: 1px solid turquoise;
+}
+
 .sidebar {
   position: fixed;
   top: 15px;

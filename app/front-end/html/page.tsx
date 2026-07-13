@@ -8,6 +8,7 @@ export default function Page() {
       <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> is a markup language for structuring web content in browsers.</p>
       <BreadcrumbsHTML />
       <ColumnGridTemplate />
+      <Flexbox />
       <Head />
       <Tables />
     </div>)
@@ -98,6 +99,85 @@ function ColumnGridTemplate() {
   </div>
   );
 };
+
+function Flexbox() {
+  return (<div id="flexbox">
+    <h2>Flexbox</h2>
+    <p>A div with the declaration display: flex; will remain block level — no other elements will appear on the same line as it.</p>
+    <p>However, it will change the behavior of its child elements. Child elements will not begin on new lines.</p>
+    <SyntaxHighlighter language='css' style={atomDark}>{`div.container {
+      display: flex;
+    }`}</SyntaxHighlighter>
+    <p>With display property <em>inline-flex</em>, divs will display inline with each other if the page is wide enough.</p>
+    <p>The child containers` width will shrink to their parents` container`s width.</p>
+    <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+      width: 150px;
+      border: 1px solid grey;
+      display: inline-flex;
+    }
+
+    .box {
+      background-color: dodgerblue;
+      height: 75px;
+      width: 75px;
+      border: 1px solid turquoise;
+    }`}</SyntaxHighlighter>
+    <SyntaxHighlighter language='React' style={atomDark}>{`<div className='container-inline-flex'>
+        <div className='box'>
+          <h3>1</h3>
+        </div>
+        <div className='box'>
+          <h3>2</h3>
+        </div>
+        <div className='box'>
+          <h3>3</h3>
+        </div>
+      </div>
+      <div className='container-inline-flex'>
+        <div className='box'>
+          <h3>1</h3>
+        </div>
+        <div className='box'>
+          <h3>2</h3>
+        </div>
+        <div className='box'>
+          <h3>3</h3>
+        </div>
+      </div>
+  </div>`}</SyntaxHighlighter>
+    <div className='container-inline-flex'>
+        <div className='box'>
+          <h3>1</h3>
+        </div>
+        <div className='box'>
+          <h3>2</h3>
+        </div>
+        <div className='box'>
+          <h3>3</h3>
+        </div>
+      </div>
+      <div className='container-inline-flex'>
+        <div className='box'>
+          <h3>1</h3>
+        </div>
+        <div className='box'>
+          <h3>2</h3>
+        </div>
+        <div className='box'>
+          <h3>3</h3>
+        </div>
+    </div>
+    <p>With a display value <em>flex</em> or <em>inline-flex</em> of parent containers, all of the child elements (flex items) are moved toward the upper left corner of the parent container.</p>
+    <p>To position the items from left to right, we use a property called justify-content.</p>
+    <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+      display: flex;
+      justify-content: flex-end;
+    }
+`}</SyntaxHighlighter>
+    <p>This will cause all of the flex items to shift to the right side of the flex container.</p>
+  </div>
+  );
+}
 
 function Head() {
   return (
