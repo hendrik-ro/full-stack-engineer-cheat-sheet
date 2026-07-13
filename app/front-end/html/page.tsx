@@ -105,8 +105,12 @@ function Flexbox() {
     <h2>Flexbox</h2>
     <FlexboxDisplay />
     <FlexboxJustifyContent />
+    <FlexboxAlignItems />
     <FlexboxFlex />
     <FlexboxFlexWrap />
+    <FlexboxAlignContent />
+    <FlexboxFlexDirection />
+    <FlexboxFlexFlow />
   </div>
   );
 }
@@ -203,16 +207,22 @@ function FlexboxJustifyContent() {
         <li><strong>space-around</strong> — items will be positioned with equal space before and after each item, resulting in double the space between elements.</li>
         <li><strong>space-between</strong> — items will be positioned with equal space between them, but no extra space before the first or after the last elements.</li>
       </ul>
+    </div>
+  );
+}
+
+function FlexboxAlignItems() {
+  return (
+    <div>
       <h3>Align-items</h3>
-      <p>This property will align items vertically within the parent container.</p>
+      <p>This property will align items horizontally within the parent container.</p>
       <ul className='leftList'>
         <li><strong>flex-start</strong> — all elements will be positioned at the top of the parent container.</li>
         <li><strong>flex-end</strong> — all elements will be positioned at the bottom of the parent container.</li>
         <li><strong>center</strong> — the center of all elements will be positioned halfway between the top and bottom of the parent container.</li>
         <li><strong>baseline</strong> — the bottom of the content of all items will be aligned with each other.</li>
         <li><strong>stretch</strong> — if possible, the items will stretch from top to bottom of the container (this is the default value; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch).</li>
-      </ul>
-    </div>
+      </ul>    </div>
   );
 }
 
@@ -260,12 +270,12 @@ function FlexboxFlex() {
     <p><em>flex</em> is a shorthand property that allows to set flex-grow, flex-shrink, and flex-basis in one line.</p>
     <p><strong>Note:</strong> The flex property is different from the flex value used for the display property.</p>
     <SyntaxHighlighter language='css' style={atomDark}>{`.big {
-      flex: 2 1 150px; /* flex-grow: 2; flex-shrink: 1; flex-basis: 150px; */
-    }
+  flex: 2 1 150px; /* flex-grow: 2; flex-shrink: 1; flex-basis: 150px; */
+}
 
-    .small {
-      flex: 1 2 100px; /* flex-grow: 1; flex-shrink: 2; flex-basis: 100px; */
-    }`}</SyntaxHighlighter>
+.small {
+  flex: 1 2 100px; /* flex-grow: 1; flex-shrink: 2; flex-basis: 100px; */
+}`}</SyntaxHighlighter>
     <p>You can ommit flex-shrink and/or flex-basis, but there is no way to ommit flex-grow.</p>
   </div>
   );
@@ -273,14 +283,64 @@ function FlexboxFlex() {
 
 function FlexboxFlexWrap() {
   return (
-    <div className='leftList'>
+    <div>
       <h3>Flex-Wrap</h3>
       <p>Allows for child containers to wrap around lines rather than shrinking.</p>
-      <ul>
+      <ul className='leftList'>
         <li><strong>wrap</strong> — child elements of a flex container that don’t fit into a row will move down to the next line</li>
         <li><strong>wrap-reverse</strong> — the same functionality as wrap, but the order of rows within a flex container is reversed (for example, in a 2-row flexbox, the first row from a wrap container will become the second in wrap-reverse and the second row from the wrap container will become the first in wrap-reverse)</li>
         <li><strong>nowrap</strong> — prevents items from wrapping; this is the default value and is only necessary to override a wrap value set by a different CSS rule.</li>
       </ul>
+      <p><strong>Note:</strong> Pairing with <em>justify-content: space-around</em> can serve as a solid baseline for a flexbox layout.</p>
+    </div>
+  );
+}
+
+function FlexboxAlignContent() {
+  return (
+    <div>
+      <h3>Align-content</h3>
+      <p>This property will align items vertically within the parent container.</p>
+      <p>align-items is for aligning elements within a single row. If a flex container has multiple rows of content, we can use align-content to space the rows from top to bottom.</p>
+      <ul className='leftList'>
+        <li><strong>flex-start</strong> — all rows of elements will be positioned at the top of the parent container with no extra space between.</li>
+        <li><strong>flex-end</strong> — all rows of elements will be positioned at the bottom of the parent container with no extra space between.</li>
+        <li><strong>center</strong> — all rows of elements will be positioned at the center of the parent element with no extra space between.</li>
+        <li><strong>space-between</strong> — all rows of elements will be spaced evenly from the top to the bottom of the container with no space above the first or below the last.</li>
+        <li><strong>space-around</strong> — all rows of elements will be spaced evenly from the top to the bottom of the container with the same amount of space at the top and bottom and between each element.</li>
+        <li><strong>stretch</strong> — if a minimum height or no height is specified, the rows of elements will stretch to fill the parent container from top to bottom (default value).</li>
+      </ul>
+    </div>
+  )
+}
+
+function FlexboxFlexDirection() {
+  return (
+    <div>
+      <h3>Flex-direction</h3>
+      <p>flex-direction determines the direction in which flex items are placed within a flex container. By default, it is set to <strong>row</strong>, which places items horizontally from left to right. However, we can change it to <strong>column</strong> to place items vertically from top to bottom, or to <strong>row-reverse</strong> or <strong>column-reverse</strong> to reverse the order of items.</p>
+      <ul className='leftList'>
+        <li><strong>row</strong> — items are placed horizontally from left to right (default value).</li>
+        <li><strong>column</strong> — items are placed vertically from top to bottom.</li>
+        <li><strong>row-reverse</strong> — items are placed horizontally from right to left.</li>
+        <li><strong>column-reverse</strong> — items are placed vertically from bottom to top.</li>
+      </ul>
+    </div>
+  );
+}
+
+function FlexboxFlexFlow() {
+  return (
+    <div>
+      <h3>Flex-flow</h3>
+      <p>flex-flow is a shorthand property that combines flex-direction and flex-wrap. It allows us to specify the direction in which flex items are placed within a flex container, as well as whether they should wrap onto multiple lines if there is not enough space.</p>
+      <ul className='leftList'>
+        <li><strong>flex-direction</strong> — specifies the direction in which flex items are placed within a flex container.</li>
+        <li><strong>flex-wrap</strong> — specifies whether flex items should wrap onto multiple lines if there is not enough space.</li>
+      </ul>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+  flex-flow: column wrap; /* flex-direction: column; flex-wrap: wrap; */
+}`}</SyntaxHighlighter>
     </div>
   );
 }
@@ -314,9 +374,11 @@ function Tables() {
       <h3>Table Tags</h3>
       <table>
         <thead>
-          <th>Tag</th>
-          <th>Name</th>
-          <th>Description</th>
+          <tr>
+            <th>Tag</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -351,12 +413,15 @@ function Tables() {
           </tr>
         </tbody>
       </table>
+
       <h3>Table Attributes</h3>
       <table>
         <thead>
-          <th>Attribute</th>
-          <th>Name</th>
-          <th>Description</th>
+          <tr>
+            <th>Attribute</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
