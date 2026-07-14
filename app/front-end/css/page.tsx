@@ -312,6 +312,31 @@ function Grid() {
   grid-row: 1fr minmax(50px, 100px) repeat(2, 1fr);
 }`}</SyntaxHighlighter>
       <p>The grid needs to have a variable width and/or height for minmax() to work.</p>
+      <table>
+        <tr>
+          <th>Property</th>
+          <th>Code example</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><span className='codeSnippet'>grid-row</span></td>
+          <td><span className='codeSnippet'>{`grid-row: 4 / 6;`}
+</span></td>
+          <td>Specifies the starting and ending row of a grid item.</td>
+        </tr>
+        <tr>
+          <td><span className='codeSnippet'>grid-column</span></td>
+          <td><span className='codeSnippet'>{`grid-column: 1 / span 3;`}
+</span></td>
+          <td>Specifies the starting and span (of 3) of a grid item.</td>
+        </tr>
+        <tr>
+          <td><span className='codeSnippet'>grid-area</span></td>
+          <td><span className='codeSnippet'>{`grid-area: 1 / 1 / span 2 / span 3;`}
+</span></td>
+          <td>Specifies grid-row-start, grid-column-start, grid-row-end, and grid-column-end.</td>
+        </tr>
+      </table>
     </div>
   );
 }
