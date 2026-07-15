@@ -15,18 +15,14 @@ h3, h4 {
   color: lightsteelblue;
 }
 
-a, .sidebarLink {
+a {
   color: steelblue;
   cursor: pointer;
   margin: 3px;
 }
 
-a:hover, .sidebar p:hover, .sidebarLink:hover {
+a:hover {
   color: lightsalmon;
-}
-
-.sidebarLink:hover {
-  background-color: darkslategray;
 }
 
 table {
@@ -108,14 +104,6 @@ ul {
   color: hsl(0, 0%, 50%);
 }
 
-/* Sidebar */
-.sidebarButton {
-    float: right;
-    margin-right: 10px;
-    border: 1px solid darkslategray;
-    color: slategray;
-}
-
 /* Short code snippets */
 .codeSnippet {
   padding: 5px;
@@ -160,25 +148,37 @@ ul {
 
 /* Media queries */
 @media (min-width: 640px) {
-  .sidebar {
+    .gridLevelTwo {
+        grid-template: 1fr / 50px 1fr;
+    }
+  .itemSidebar {
     overflow: hidden;
   }
 }
 
 @media (min-width: 768px) {
-  .sidebar {
+    .gridLevelTwo {
+        grid-template: 1fr / 50px 1fr;
+    }
+  .itemSidebar {
     overflow: hidden;
   }
 }
 
 @media (min-width: 1024px) {
-  .sidebar {
+    .gridLevelTwo {
+        grid-template: 1fr / 200px 1fr;
+    }
+  .itemSidebar {
     overflow: auto;
   }
 }
 
 @media (min-width: 1280px) {
-  .sidebar {
+    .gridLevelTwo {
+        grid-template: 1fr / 200px 1fr;
+    }
+  .itemSidebar {
     overflow: auto;
   }
 }

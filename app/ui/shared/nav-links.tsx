@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+import styles from './sidenav.module.css'
+
 interface NavLinksProps {
   links: Array<{ name: string; href: string }>;
 }
@@ -17,7 +19,7 @@ export default function NavLinks({ links }: NavLinksProps) {
             key={link.name}
             href={link.href}
           >
-            <p className="sidebarLink">{link.name}</p>
+            <p className={styles.sidebarLink}>{link.name}</p>
           </Link>
         );
       })}
@@ -46,7 +48,7 @@ function ButtonCollapse() {
   };
 
   return (
-    <button className="sidebarButton" onClick={toggleSidebar}>
+    <button className={styles.sidebarButton} onClick={toggleSidebar}>
       {isSidebarOpen ? '<<' : '>>'}
     </button>
   );
