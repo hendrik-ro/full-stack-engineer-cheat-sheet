@@ -1,27 +1,24 @@
-import SideNav from '@/app/ui/shared/sidenav';
+import styles from './frameworks.module.css';
+import Subnav from '@/app/ui/shared/subnav/subnav';
 
 const frameworksLinks = [
   {
-    name: 'React',
-    href: '/front-end/react',
-  },
-  {
-    name: 'Frameworks',
-    href: '/front-end/react/frameworks',
-  },
-  {
     name: 'Next.js',
     href: '/front-end/react/frameworks/next-js',
+  },
+  {
+    name: 'Vite',
+    href: '/front-end/react/frameworks/vite',
   },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="gridFrameworks">
-      <div className="gridNav">
-        <SideNav links={frameworksLinks} />
+    <div className={styles.gridFrameworks}>
+      <div className={styles.gridNav}>
+        <Subnav links={frameworksLinks} />
       </div>
-      <div className="itemContent">{children}</div>
+      <div className={styles.gridContent}>{children}</div>
     </div>
   );
 }
