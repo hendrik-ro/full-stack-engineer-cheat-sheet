@@ -1,6 +1,6 @@
 .gridFrameworks {
     display: grid;
-    grid-template: 50px 1fr / 1fr;
+    grid-template: 48px 1fr / 1fr;
     grid-auto-flow: row;
     min-height: 100vh;
     height: 100vh;
