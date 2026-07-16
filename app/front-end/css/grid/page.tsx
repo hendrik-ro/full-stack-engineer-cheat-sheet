@@ -31,6 +31,7 @@ function Grid() {
       <GridTable />
       <GridTemplateAreas />
       <GridAlign />
+      <GridAuto />
     </div>
   );
 }
@@ -185,6 +186,33 @@ function GridAlign() {
       </ul>
       <h3>Justify-self & align-self</h3>
       <p><strong>justify-self</strong> and <strong>align-self</strong> override the default alignment of grid items within their cells.</p>
+    </div>
+  );
+}
+
+function GridAuto() {
+  return (
+    <div id='gridAuto'>
+      <h3>Grid Auto Rows and Columns</h3>
+      <p><strong>grid-auto-rows</strong> and <strong>grid-auto-columns</strong> are used to define the size of grid rows and columns when there is no explicit grid template defined.</p>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+        display: grid;
+        grid: repeat(2, 100px) / repeat(2, 150px);
+        grid-auto-rows: 50px;
+      }
+`}</SyntaxHighlighter>
+      <p>After the initial two rows are filled, each {`<div>`} is added as a 50px row.</p>
+      <h3>Grid Auto Flow</h3>
+      <p><strong>grid-auto-flow</strong> is used to define how grid items are placed when there is no explicit grid template defined.</p>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+        display: grid;
+        grid-auto-flow: row /* row or column or dense */;
+      }`}</SyntaxHighlighter>
+      <ul>
+        <li><strong>row</strong> - grid items are placed in rows (default)</li>
+        <li><strong>column</strong> - grid items are placed in columns</li>
+        <li><strong>dense</strong> - grid items are placed in the smallest possible space</li>
+      </ul>
     </div>
   );
 }
