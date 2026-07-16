@@ -135,7 +135,7 @@ function GridAlign() {
         display: grid;
         justify-items: center;
       }`}</SyntaxHighlighter>
-      <ul className="leftList">
+      <ul>
         <li><strong>center</strong> - center the item within its cell</li>
         <li><strong>start</strong> - align the item to the start of its cell</li>
         <li><strong>end</strong> - align the item to the end of its cell</li>
@@ -145,9 +145,9 @@ function GridAlign() {
       <p>You can position the entire grid along the row axis. This property is declared on grid containers.</p>
       <SyntaxHighlighter language='css' style={atomDark}>{`.container {
         display: grid;
-        align-items: center;
+        justify-content: center;
       }`}</SyntaxHighlighter>
-      <ul className="leftList">
+      <ul>
         <li><strong>center</strong> - centers the grid horizontally in the grid container</li>
         <li><strong>start</strong> - aligns the grid to the left side of the grid container</li>
         <li><strong>end</strong> - aligns the grid to the right side of the grid container</li>
@@ -156,6 +156,35 @@ function GridAlign() {
         <li><strong>space-between</strong> - includes an equal amount of space between grid items and no space at either end</li>
         <li><strong>space-evenly</strong> -  places an even amount of space between grid items and at either end</li>
       </ul>
+      <h3>Align-Items</h3>
+      <p>You can align grid items along the block or column axis using the align-items property.</p>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+        display: grid;
+        align-items: center;
+      }`}</SyntaxHighlighter>
+      <ul>
+        <li><strong>center</strong> - center the item within the grid area</li>
+        <li><strong>start</strong> - align the item to the top of the grid area</li>
+        <li><strong>end</strong> - align the item to the bottom of the grid area</li>
+        <li><strong>stretch</strong> - stretch the item to fill the grid area</li>
+      </ul>
+      <h3>Align-Content</h3>
+      <p>You can position the entire grid along the row axis. This property is declared on grid containers.</p>
+      <SyntaxHighlighter language='css' style={atomDark}>{`.container {
+        display: grid;
+        align-content: center;
+      }`}</SyntaxHighlighter>
+      <ul>
+        <li><strong>center</strong> - centers the grid vertically in the grid container</li>
+        <li><strong>start</strong> - aligns the grid to the top side of the grid container</li>
+        <li><strong>end</strong> - aligns the grid to the bottom side of the grid container</li>
+        <li><strong>stretch</strong> - stretches the grid items to increase the size of the grid to expand vertically across the container</li>
+        <li><strong>space-around</strong> - includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element </li>
+        <li><strong>space-between</strong> - includes an equal amount of space between grid items and no space at either end</li>
+        <li><strong>space-evenly</strong> -  places an even amount of space between grid items and at either end</li>
+      </ul>
+      <h3>Justify-self & align-self</h3>
+      <p><strong>justify-self</strong> and <strong>align-self</strong> override the default alignment of grid items within their cells.</p>
     </div>
   );
 }
