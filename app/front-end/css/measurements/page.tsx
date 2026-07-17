@@ -5,6 +5,15 @@ export default function Page() {
   return (
     <div>
       <h2>Measurements</h2>
+      <Units />
+      <Viewport />
+    </div>
+  );
+}
+
+function Units() {
+  return (
+    <div>
       <p>CSS supports absolute and relative measurements.</p>
       <ul>
         <li>Absolute measurements:</li>
@@ -29,6 +38,21 @@ export default function Page() {
         min-width: 300px;
         max-width: 600px;
       }`}</SyntaxHighlighter>
+    </div>
+  )
+}
+
+function Viewport() {
+  return (
+    <div>
+      <h3>Viewport</h3>
+      <SyntaxHighlighter language="css" style={atomDark}>{`<!DOCTYPE html>
+      <html lang="en">
+        <head>
+          ...
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          ...
+        </head>`}</SyntaxHighlighter>
     </div>
   );
 }
