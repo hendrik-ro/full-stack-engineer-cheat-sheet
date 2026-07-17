@@ -27,6 +27,7 @@ export default function ImagesPage() {
         background-size: cover;
       }`}</SyntaxHighlighter>
       <p><strong>background-size:</strong> The image will cover the entire background of the element, all while keeping the image in proportion. If the dimensions of the image exceed the dimensions of the container then only a portion of the image will display.</p>
+      <br />
     </div>
   );
 }
