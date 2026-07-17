@@ -19,7 +19,7 @@ function HomeContent() {
       <p style={{fontSize: '12px'}}>This cheat sheet is work in progress and is continuously updated.</p>
       <h2 id="front">Front End</h2>
       <div className={style.topics}>
-       <Link href="./front-end/html/"><button className={style.topicsItem}>HTML</button></Link>
+        <Link href="./front-end/html/"><button className={style.topicsItem}>HTML</button></Link>
         <Link href="./front-end/css/"><button className={style.topicsItem}>CSS</button></Link>
         <Link href="./front-end/react/"><button className={style.topicsItem}>React</button></Link>
       </div>
