@@ -32,10 +32,7 @@ export default function Page() {
           specific needs.
         </p>
         <p>JavaScript</p>
-        <SyntaxHighlighter
-          language="javascript"
-          style={dracula}
-        >
+        <SyntaxHighlighter language="javascript" style={dracula}>
           {`const express = require('express');
 const app = express();
 
@@ -48,10 +45,7 @@ app.listen(3000, () => {
 });`}
         </SyntaxHighlighter>
         <p>Golang</p>
-        <SyntaxHighlighter
-          language="go"
-          style={dracula}
-        >
+        <SyntaxHighlighter language="go" style={dracula}>
           {`package main
 
 import "fmt"

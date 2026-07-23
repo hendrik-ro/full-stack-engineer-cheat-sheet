@@ -8,7 +8,7 @@ const reactLinks = [
   {
     name: "DOM Manipulation",
     href: "/front-end/dom/manipulation",
-  }
+  },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
