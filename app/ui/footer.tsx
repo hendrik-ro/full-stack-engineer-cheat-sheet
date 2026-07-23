@@ -1,7 +1,13 @@
+import Link from "next/link";
+
 export default function HomeFooter() {
   return (
     <div className="footer">
-      <p>&copy; {new Date().getFullYear()} Full-Stack Engineer Cheat Sheet</p>
+      <p><Link
+        href="https://github.com/hendrik-ro/full-stack-cheat-sheet"
+        target="_blank"
+        rel="noopener noreferrer"
+      >&copy; {new Date().getFullYear()} Full-Stack Cheat Sheet</Link></p>
     </div>
   );
 }
