@@ -10,6 +10,10 @@ const reactLinks = [
     href: "/front-end/dom/document",
   },
   {
+    name: "Interactivity",
+    href: "/front-end/dom/interactivity",
+  },
+  {
     name: "Properties",
     href: "/front-end/dom/properties",
   },
