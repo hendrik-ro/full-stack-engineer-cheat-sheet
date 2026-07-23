@@ -6,8 +6,24 @@ const reactLinks = [
     href: "/front-end/dom",
   },
   {
-    name: "DOM Manipulation",
-    href: "/front-end/dom/manipulation",
+    name: "Document",
+    href: "/front-end/dom/document",
+  },
+  {
+    name: "Interactivity",
+    href: "/front-end/dom/interactivity",
+  },
+  {
+    name: "Properties",
+    href: "/front-end/dom/properties",
+  },
+  {
+    name: "Style",
+    href: "/front-end/dom/style",
+  },
+  {
+    name: "Traversing",
+    href: "/front-end/dom/traversing",
   },
 ];
 
